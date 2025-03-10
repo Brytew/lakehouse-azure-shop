@@ -90,7 +90,7 @@ VALUES
     ('Olivia White', 'Fleet Street 22', 'Londyn', 'Wielka Brytania', '+44 20 9876 5432', 'olivia.white@email.com'),
     ('Francisco Gonzalez', 'Calle O’Higgins 45', 'Santiago', 'Chile', '+56 9 2345 6789', 'francisco.gonzalez@email.com'),
     ('Ekaterina Smirnova', 'Prospekt Lenina 66', 'Jekaterynburg', 'Rosja', '+7 343 234 5678', 'ekaterina.smirnova@email.com'),
-     ('Miguel Torres', 'Avenida Libertador 120', 'Lima', 'Peru', '+51 987 654 321', 'miguel.torres@email.com'),
+    ('Miguel Torres', 'Avenida Libertador 120', 'Lima', 'Peru', '+51 987 654 321', 'miguel.torres@email.com'),
     ('Sofia Moreno', 'Calle San Martin 55', 'Asunción', 'Paragwaj', '+595 981 234 567', 'sofia.moreno@email.com'),
     ('Ali Hamidi', 'Boulevard Mohammed V 18', 'Casablanca', 'Maroko', '+212 661 234 567', 'ali.hamidi@email.com'),
     ('Nikolai Petrov', 'Tchaikovsky St 12', 'Mińsk', 'Białoruś', '+375 29 654 3210', 'nikolai.petrov@email.com'),

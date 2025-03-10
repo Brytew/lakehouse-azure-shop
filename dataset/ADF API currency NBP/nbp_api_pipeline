@@ -1,0 +1,6 @@
+
+Web Activity
+URL: ttp://api.nbp.pl/api/exchangerates/tables/A/?format=json
+Method: GET
+Authentication: None
+HTTP request timeout: 00:02:00
