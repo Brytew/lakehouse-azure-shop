@@ -8,7 +8,8 @@ CREATE TABLE [customers]
     [customer_city] VARCHAR(255) NULL,
     [customer_country] VARCHAR(255) NULL,   
     [customer_phone] VARCHAR(100) NULL,
-    [customer_email] VARCHAR(255) NULL
+    [customer_email] VARCHAR(255) NULL,
+    [last_timestamp] DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 );
 GO
@@ -117,5 +118,3 @@ VALUES
     ('David Parker', 'Yonge St 500', 'Toronto', 'Kanada', '+1 416 876 5432', 'david.parker@email.com'),
     ('Xavier Dupont', 'Rue de la République 12', 'Marsylia', 'Francja', '+33 7 4567 8901', 'xavier.dupont@email.com'),
     ('Rafael Sousa', 'Rua das Laranjeiras 88', 'Salvador', 'Brazylia', '+55 71 9876 5432', 'rafael.sousa@email.com');
-
-

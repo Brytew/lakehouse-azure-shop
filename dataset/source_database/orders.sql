@@ -9,6 +9,7 @@ CREATE TABLE [orders]
     [orders_units] INT NULL,    
     [orders_sale_price] VARCHAR(100) NULL,
     [orders_currency] VARCHAR(255) NULL,
+    [last_timestamp] DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 
 );
 GO

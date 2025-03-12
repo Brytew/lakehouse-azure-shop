@@ -1,0 +1,18 @@
+pipeline:
+
++Lookup "tables salesDB" -> ForEach
+ForEach: (Lookup "Old watermark", Lookup "New watermark") -> Copy data "Copy table Data" -> Stored procedure "Update Watermark"
+
++ForEach
+> Lookup "Old watermark": Setting->Query     SELECT * FROM [dbo].[watermark] AS WatermarkValue WHERE table_name='@{item().Table_Name}'
+> Lookup "New watermark": Setting->Query     SELECT MAX(last_timestamp) as NewWatermarkvalue FROM @{item().Table_Name}
+
+>Copy data:
+Source: Query:  SELECT * FROM @{item().Table_Name} WHERE last_timestamp > '@{activity('Lookup Old Watermark').output.firstRow.watermark_value}'
+Sink: new Parquet file with name: @concat('parquetdatabase/',item().Table_Name,'_',formatDateTime(utcNow(),'yyyyMMddHHmmss'),'.parquet')
+
+>Stored procedure
+Stored procedure "update_watermark" with parameters: new_watermakr (@{activity('Lookup New Watermark').output.firstRow.NewWatermarkvalue}) and table_name (@{activity('Lookup Old Watermark').output.firstRow.table_name})
+
+Results:
+1 parquet file per table from the Azure SQL database, containing data between the old last_timestamp and the new last_timestamp (watermark).
