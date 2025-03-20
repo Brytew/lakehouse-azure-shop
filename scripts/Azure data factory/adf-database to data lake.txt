@@ -14,5 +14,9 @@ Sink: new Parquet file with name: @concat('parquetdatabase/',item().Table_Name,'
 >Stored procedure
 Stored procedure "update_watermark" with parameters: new_watermakr (@{activity('Lookup New Watermark').output.firstRow.NewWatermarkvalue}) and table_name (@{activity('Lookup Old Watermark').output.firstRow.table_name})
 
+Trigger:
+
+
+
 Results:
 1 parquet file per table from the Azure SQL database, containing data between the old last_timestamp and the new last_timestamp (watermark).
