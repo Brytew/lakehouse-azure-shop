@@ -1,0 +1,7 @@
+#create a new namespace in databricks
+
+$RESOURCEGROUPNAME="projOne"
+$LOCATION="westeurope"
+$WORKSPACE="databricks_silver"
+az config set extension.dynamic_install_allow_preview=false
+az databricks workspace create --resource-group $RESOURCEGROUPNAME --name $WORKSPACE --location $LOCATION --sku trial

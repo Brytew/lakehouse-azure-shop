@@ -1,0 +1,6 @@
+Warstwa brązu:
+
+
+
+silver:
+1. Sprawdzenie danych, formatów, null
